@@ -201,7 +201,8 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
                   aspectRatio: _frameAspectRatio,
                   child: _podCtr.videoCtr?.value.isInitialized ?? false
                       ? _buildPlayer()
-                      : Center(child: circularProgressIndicator),
+                      // : Center(child: circularProgressIndicator),
+                      : Container()
                 );
               },
             ),
