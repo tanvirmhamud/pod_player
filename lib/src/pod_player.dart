@@ -222,8 +222,8 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
 
   Widget _thumbnailAndLoadingWidget() {
     if (widget.videoThumbnail == null) {
-      // return _buildLoading();
-      return Container();
+      return _buildLoading();
+    
     }
 
     return SizedBox.expand(
