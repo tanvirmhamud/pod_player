@@ -198,12 +198,11 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
                 }
 
                 return AspectRatio(
-                  aspectRatio: _frameAspectRatio,
-                  child: _podCtr.videoCtr?.value.isInitialized ?? false
-                      ? _buildPlayer()
-                      // : Center(child: circularProgressIndicator),
-                      : Container()
-                );
+                    aspectRatio: _frameAspectRatio,
+                    child: _podCtr.videoCtr?.value.isInitialized ?? false
+                        ? _buildPlayer()
+                        // : Center(child: circularProgressIndicator),
+                        : Container());
               },
             ),
           ),
@@ -212,19 +211,19 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
     );
   }
 
-  Widget _buildLoading() {
-    return widget.onLoading?.call(context) ??
-        const CircularProgressIndicator(
-          backgroundColor: Colors.black87,
-          color: Colors.white,
-          strokeWidth: 2,
-        );
-  }
+  // Widget _buildLoading() {
+  //   return widget.onLoading?.call(context) ??
+  //       const CircularProgressIndicator(
+  //         backgroundColor: Colors.black87,
+  //         color: Colors.white,
+  //         strokeWidth: 2,
+  //       );
+  // }
 
   Widget _thumbnailAndLoadingWidget() {
     if (widget.videoThumbnail == null) {
-      return _buildLoading();
-    
+      // return _buildLoading();
+      return Container();
     }
 
     return SizedBox.expand(
@@ -238,7 +237,8 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
         child: DecoratedBox(
           decoration: BoxDecoration(image: widget.videoThumbnail),
           child: Center(
-            child: _buildLoading(),
+            // child: _buildLoading(),
+            child: Container(),
           ),
         ),
       ),
