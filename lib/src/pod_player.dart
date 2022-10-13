@@ -236,8 +236,8 @@ class _PodVideoPlayerState extends State<PodVideoPlayer>
         child: DecoratedBox(
           decoration: BoxDecoration(image: widget.videoThumbnail),
           child: Center(
-            // child: _buildLoading(),
-            child: Container(),
+            child: _buildLoading(),
+            
           ),
         ),
       ),
